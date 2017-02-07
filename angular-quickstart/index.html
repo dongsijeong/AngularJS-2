@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular 2 实例 - 菜鸟教程(runoob.com)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <!-- 1. 载入库 -->
+    <!-- IE 需要 polyfill -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- 2. 配置 SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function (err) {
+            console.error(err);
+        });
+    </script>
+</head>
+<!-- 3. 显示应用 -->
+<!--
+这里值得注意的地方有：
+JavaScript 库： core-js 是为老式浏览器提供的填充库， zone.js 和 reflect-metadata 库是 Angular 需要的，而 SystemJS 库是用来做模块加载的。
+SystemJS 的配置文件和脚本，可以导入并运行了我们刚刚在 main 文件中写的 app 模块。
+<my-app> 标签是应用载入的地方
+-->
+
+<body>
+    <my-app>Loading...</my-app>
+    <my-ngFor>Loading...</my-ngFor>
+    <a href="ngForIndex.html">使用 ngFor 显示数组属性</a>
+</body>
+</html>
